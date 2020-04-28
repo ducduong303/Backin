@@ -1,0 +1,132 @@
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 40px 0;
+}
+
+.footer .footer__container .footer__logo {
+  text-align: center;
+}
+
+.footer .footer__container .footer__logo img {
+  width: 140px;
+}
+
+.footer .footer__container .footer__menu {
+  margin: 10px 0;
+}
+
+.footer .footer__container .footer__menu .footer__menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .footer__container .footer__menu .footer__menu__list .list__footer {
+  position: relative;
+}
+
+.footer .footer__container .footer__menu .footer__menu__list .list__footer::before {
+  content: '';
+  background-color: #aaa9a9;
+  width: 24px;
+  height: 1px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer .footer__container .footer__menu .footer__menu__list li a {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: #000;
+  opacity: 0.8;
+  padding: 0 10px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer .footer__container .footer__menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer .footer__container .footer__menu__list li a {
+    margin: 0 10px !important;
+    text-align: center;
+  }
+  .footer .footer__container .footer__menu__list .list__footer::before {
+    display: none !important;
+  }
+}
+
+.footer .footer__container .footer__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer .footer__container .footer__icon ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0px;
+}
+
+.footer .footer__container .footer__icon ul li a {
+  text-align: center;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 50%;
+  background-color: #000;
+  display: inline-block;
+  margin: 0 5px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.footer .footer__container .footer__icon ul li a:hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.footer .footer__container p {
+  text-align: center;
+  padding: 5px 0;
+}
+/*# sourceMappingURL=Footer.css.map */

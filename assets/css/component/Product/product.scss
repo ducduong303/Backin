@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap');
+
+.product{
+    .product__discription{
+      margin-bottom: 50px;;
+      text-align: center;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        .product__discription__box{
+            width: 60%;
+            h3{
+                font-size: 30px;
+                color: #000;
+                opacity: 0.8;
+                text-align: center;
+                cursor: pointer;
+                position: relative;
+                &::before{
+                    transition: 0.4s;
+                    content: '';
+                    position: absolute;
+                    width: 70px;
+                    height: 2px;
+                    background-color: #000;
+                    bottom: -10px;
+                    margin: 5px 0;
+
+                }
+            }
+            p{
+                font-size: 16px;
+                padding: 20px 0;
+                font-weight: 500;
+                color: #555;
+                line-height: 28px;
+            }
+        }
+      
+    }
+    .product__box{
+       .product__container{
+           .grap{
+               cursor: grab !important;
+           }
+            .product__item{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                position: relative;
+                margin-bottom: 40px;
+                border: 1px solid #7f8c8d ;;
+                box-sizing: border-box;
+                cursor: pointer;
+                &:hover{
+                    border: 1px solid #2c3e50;
+                }
+                .product__item-img{
+                    text-align: center;
+                    background-color: #f2f2f2;
+                    overflow: hidden;
+                    .img-product{
+                        width: 100%;
+                        // cursor: grab;
+                   
+                    }
+                    #a,#b,#c,#d,#e,#f,#g,#h{
+                        &.small{
+                            animation: small 0.5s linear;
+                            @keyframes small {
+                                0%{ transform: scale(0.5);}
+                                100%{transform: scale(1);}
+                            }
+                        }
+                    }
+                    .product__item-img-nav{
+                        width: 100%;
+                       
+                        margin-bottom: 10px;
+                        cursor: pointer;
+                        display: flex;
+                        padding: 0 20px;
+                        justify-content: space-around;
+                        img{    
+                            max-width: 28%;
+                            flex:  0 0 28%;
+                            border: 1px solid #000;
+                        }
+                        .nav-a{
+                            &.xanh{
+                                border: 1px solid rgb(240, 25, 25);
+                            }
+                        }
+                        .nav-b{
+                            &.xanh{
+                                border: 1px solid rgb(240, 25, 25);
+                            }
+                        }
+                        .nav-c{
+                            &.xanh{
+                                border: 1px solid rgb(240, 25, 25);
+                            }
+                        }
+                        .nav-d{
+                            &.xanh{
+                                border: 1px solid rgb(240, 25, 25);
+                            }
+                        }
+                    }
+                }
+                .product__name{
+                    text-align: center;
+                    background-color: #f2f2f2;
+                    padding: 10px 0 10px 0;
+                    h3{
+                        color: #2c3e50 ;
+                    }
+                    .add-cart{
+                        color: #fff;
+                        // background-color: #6ab40c;
+                        background-color:#7f8c8d ;
+                        width: 82%;
+                        height: 40px;
+                        line-height: 40px;
+                        margin-top: 5px;
+                        display: inline-block;
+                        font-family: 'Baloo Thambi 2', cursive;
+                        font-size: 18px;
+                        transition: 0.5s;
+                        &:hover{
+                            color: #fff;
+                            background-color: #000;
+                        }
+                        i{
+                            padding-right: 5px;
+                        }
+                    }
+                }
+                .item-price{
+                    position: absolute;
+                    top: 10px;
+                    right: 15px;
+                    color: #2c3e50 ;
+                    font-family: 'Baloo Thambi 2', cursive;
+                }
+            }
+       } 
+    }
+}
+
+
+
+@media (max-width:767px){
+    .product{
+        .product__box{
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+

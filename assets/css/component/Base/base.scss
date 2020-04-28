@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s all;
+}
+html,body{
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+$font-size-a:13px;
+$color-a:#fff;
+.wrapper{
+    // background-color:#f2f2f2 ;
+}
+// =========== Carousel============//
+.owl-dots{
+    margin: 0 !important;
+}
+.owl-dots .owl-dot{
+    outline: none;
+    
+}
+.owl-theme{
+    cursor: grab;
+}
+.owl-dots .owl-dot span{
+    // width: inherit;
+    // height: inherit;
+    padding: 0 15px ;
+    // width: 20px !important;
+    height: 3px !important;
+    background-color: transparent;
+    color: #000;
+    outline: none !important;
+    border: none;
+    border-radius: 0;
+}
+.ontop{
+    position: fixed;
+    right: 20px;
+    bottom: 30px;
+    opacity: 0;
+    visibility: hidden; 
+    // transform: scale(0);
+    transform: translateY(100%);
+    transition: 0.5s;
+    &.scale{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0%);
+      
+    }
+    a{
+        box-shadow: 1px 2px 6px 4px rgba(53,57,68,0.2);
+        text-align: center;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        line-height: 30px;
+        background-color: #000;
+        color: #fff;
+     
+      
+    }
+}
+.load{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999999; 
+    &::before{
+        position: absolute;
+        content: '';
+        width: 50%;
+        height: 100%;
+        background-color: #000;
+        top: 0;
+        left: 0;
+        z-index: 999;  
+        animation: left 0.4s ease-in-out;
+        animation-delay: 1.8s;;
+        @keyframes left {
+            0%{
+               
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(-100%);
+            }
+        }
+    }
+    &::after{
+        position: absolute;
+        content: '';
+        width: 50%;
+        height: 100%;
+        background-color: #000;
+        top: 0;
+        right: 0;
+        z-index: 999; 
+        animation: right 0.4s ease-in-out;
+        animation-delay: 1.8s;;
+        @keyframes right {
+            0%{
+           
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(100%);
+            }
+        } 
+    } 
+ 
+    &.none{
+        opacity: 0;
+        visibility: hidden;
+        
+    }
+    
+    ul{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        z-index: 9999;
+        &.none{
+            opacity: 0;
+            visibility: hidden;
+        }
+        li{
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 0 15px;
+            animation: animate 1.6s ease-in-out infinite;
+            @keyframes animate {
+                0%,40%,100%{
+                    transform: scale(0.2);
+                }
+                20%{
+                    transform: scale(1);
+                }
+
+            }
+        }
+        li:nth-child(1){
+            animation-delay: -1.4s;
+            background-color: #76FF03;
+            box-shadow: 0 0 50px #76FF03;;
+        }
+        li:nth-child(2){
+            animation-delay: -1.2s;
+            background-color: #ffff00;
+            box-shadow: 0 0 50px #ffff00;;
+        }
+        li:nth-child(3){
+            animation-delay: -1s;
+            background-color: #F06292;
+            box-shadow: 0 0 50px #F06292;;
+        }
+        li:nth-child(4){
+            animation-delay: -0.8s;
+            background-color: #4FC3F7;
+            box-shadow: 0 0 50px #4FC3F7;
+        }
+        li:nth-child(5){
+            animation-delay: -0.6s;
+            background-color: #BA68C8;
+            box-shadow: 0 0 50px #BA68C8;;
+        }    
+    }
+}

@@ -1,0 +1,85 @@
+.form_box {
+  background-color: #f2f2f2;
+}
+
+.form_box .form {
+  padding: 50px 0;
+}
+
+.form_box .form .form__container .form__item {
+  margin-bottom: 30px;
+}
+
+.form_box .form .form__container .form__item .form__img {
+  overflow: hidden;
+}
+
+.form_box .form .form__container .form__item .form__img img {
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.form_box .form .form__container .form__item .form__img img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+.form_box .form .form__container .form__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+}
+
+.form_box .form .form__container .form__text span {
+  color: #b6b6b6;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 18px;
+  display: inline-block;
+  letter-spacing: 2px;
+  text-align: justify;
+}
+
+.form_box .form .form__container .form__text h4 {
+  text-align: justify;
+  padding: 5px 0;
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.form_box .form .form__container .form__text p {
+  color: #a8a8a8;
+  font-size: 16px;
+  margin-top: 5px;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.form_box .form .form__container a {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: 2px solid;
+  border-color: #555;
+  color: #555;
+  background: transparent;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.form_box .form .form__container a:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+/*# sourceMappingURL=Form.css.map */

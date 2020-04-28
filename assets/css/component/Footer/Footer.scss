@@ -1,0 +1,99 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    .footer__container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 40px 0;
+        .footer__logo{
+            text-align: center;
+            img{
+                width: 140px;
+            }
+        }
+        .footer__menu{
+            margin: 10px 0;
+            .footer__menu__list{
+                display: flex;
+                justify-content: center;
+                .list__footer{
+                    position: relative;
+                    &::before{
+                       content:'';
+                       background-color: #aaa9a9;
+                       width: 24px;
+                       height: 1px;
+               
+                       display: inline-block;
+                       vertical-align: middle;
+                    }
+                }
+                li{
+                    a{
+                         display: inline-block;
+                        //  margin: 20px 30px;
+                         text-transform: uppercase;
+                         font-weight: 600;
+                         letter-spacing: 2px;
+                         font-size: 13px;
+                         color: #000;
+                         opacity: 0.8;
+                         padding: 0 10px;
+                         text-align: center;
+                    }
+                }
+            }
+        }
+        @media (max-width:768px) {
+            .footer__menu__list{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                li a{
+                    margin: 0 10px !important;
+                    text-align: center;
+                }
+                .list__footer{
+                    &::before{
+                        display: none !important;
+                    }
+                }
+           
+            }
+        }
+        .footer__icon{
+            display: flex;
+            justify-content: center;
+
+            ul{
+                display: flex;
+                margin: 10px 0px;
+                li a{
+                    text-align: center;
+                    width: 45px;
+                    height: 45px;
+                    line-height: 45px;
+                    color: #fff;
+                    font-size: 16px;
+                    border-radius: 50%;
+                    background-color: #000;
+                    display: inline-block;
+                    margin: 0 5px;
+                    position: relative;
+                    overflow: hidden;
+                    transition: 0.5s ;
+                    &:hover{
+                        transform: rotateY(180deg);
+                        
+                    }
+                  
+                }
+            }
+        }
+        p{
+            text-align: center;
+            padding: 5px 0;
+        }
+    }
+}

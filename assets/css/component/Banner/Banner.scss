@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+
+}
+.owl-item.active .descript h4{
+      animation: len 1.5s;
+      @keyframes len {
+        0%{
+            transform: translateY(130%);
+            transition: all 1.5s cubic-bezier(0, 0.45, 0.58, 0.2);
+            transition-delay: 0.8s;
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0%);
+            transition: all 1.5s cubic-bezier(0, 0.45, 0.58, 0.2);
+            transition-delay: 0.8s;
+            opacity: 1;
+        }
+    }
+}
+.owl-item.active .intro h3{
+    animation: to 1s ease forwards;
+    @keyframes to {
+        0%{ opacity: 0;
+            transform: scale(0);
+            transition: all 1.5s cubic-bezier(0, 0.45, 0.58, 0.2);
+        }
+        100%{
+            opacity: 1; 
+            transform: scale(1);
+            transition: all 1.5s cubic-bezier(0, 0.45, 0.58, 0.2);
+           
+        }
+    }
+}
+.owl-item.active .intro p{
+    animation: xuong 1.5s ease;
+    @keyframes xuong {
+        0%{ opacity: 0;
+            transform: translateY(-100%);
+     
+            transition: all 1.5s cubic-bezier(0, 0.45, 0.58, 0.2);
+        }
+        100%{
+            opacity: 1; 
+            transform: translateY(0%);
+        
+            transition: all 1.5s cubic-bezier(0, 0.45, 0.58, 0.2);
+        }
+        
+    }
+}
+.banner{
+    .slide1{
+            .item{
+                position: relative;
+                img{
+        
+                }
+                .item__text{
+                    position: absolute;
+                    top: 0;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    height: 100%;
+                    width: 100%;
+                    line-height: 40px;
+                    .intro{
+                        color: #fff;
+                        text-align: center;
+                        overflow: hidden;
+                    
+                        p{
+                            font-size: 20px;
+                            display: inline-block;
+                            margin-bottom: 20px;
+                        }
+                        h3{
+                            font-size: 50px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .descript{
+                        overflow: hidden;
+                        margin-bottom: 10px;
+                        h4{
+                            color: #fff;
+                            font-size: 15px;
+                            font-weight: 500;
+                        }
+                    }
+                    .box__button{
+                        margin-top: 10px;
+                        a{
+                            text-transform: uppercase;
+                            padding: 0px 30px;
+                            font-size: 16px;
+                            display: inline-block;
+                            border: 2px solid #fff;
+                            color: #fff;
+                            background-color: transparent;
+                            
+                            transform-origin: 0 0;
+                            &:hover{
+                                background-color: #000;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}
+
+@media (max-width:767px){
+    .banner{
+        .slide1{
+            .item{
+                .item__text{
+                    .intro{
+                        p{
+                            margin: 0;
+                            font-size: 16px !important;
+                        }
+                        h3{
+                            font-size: 30px;
+                            margin: 0;
+                        }
+                    }
+                    .descript{
+                        margin: 0;
+                        h4{
+
+                        }
+                    }
+                    .box__button{
+                        display: none;
+                        a{
+                            padding: 0px 20px;
+                            font-size: 13px;
+                            margin: 0;
+                            display: block;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
